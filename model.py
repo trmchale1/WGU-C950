@@ -1,5 +1,3 @@
-
-
 def sort_for_delivery(nested_dictionary):    
     dropoffs = []
     notes = []
@@ -19,46 +17,46 @@ def sort_for_delivery(nested_dictionary):
     dropoffs.extend(notes)
     return dropoffs 
 
-WGUPS_PACK = { 1 : { "address" : "195 W Oakland Ave", "arrival" : "10:30 AM","weight" : "21"},
-2 : {"address" : "2530 S 500 E", "arrival" : "EOD", "weight":"44"},
-3 : {"address" : "233 Canyon Rd","arrival" : "EOD", "weight" : "2", "notes" : "Can only be on truck 2"} ,
-4 : {"address" : "380 W 2880 S", "arrival" : "EOD", "weight" :     "4" },
-5 :  { "address" : "410 S State St", "arrival" : "EOD", "weight" : "5" },
-6 : { "address" : "3060 Lester St","arrival" : "10:30 AM", "weight" :"88","notes" : "Delayed on flight---will not arrive to depot until 9:05 am" },
-7 : { "address" : "1330 2100 S", "arrival" : "EOD", "weight" : "8" } ,
-8 : { "address" : "300 State St", "arrival" : "EOD", "weight" : "9" } ,
-9 : {"address" : "300 State St", "arrival" : "EOD", "weight" : "2", "notes" : "Wrong address listed" },
-10 : {"address" : "600 E 900 South", "arrival" : "EOD", "weight" : "1" } ,
-11 : { "address" : "2600 Taylorsville Blvd", "arrival" : "EOD", "weight" : "1" } ,
-12 : {"address" : "3575 W Valley Central Station bus Loop", "arrival" : "EOD", "weight" : "1" },
-13 : {"address" : "2010 W 500 S", "arrival" : "10:30 AM", "weight" : "2" },
-14 : {"address" : "4300 S 1300 E", "arrival" : "10:30 AM", "weight" : "88", "notes" : "Must be delivered with 15, 19" },
-15 : {"address" : "4580 S 2300 E", "arrival" : "9:00 AM", "weight" : "4"},
-16 : {"address" : "4580 S 2300 E", "arrival" : "10:30 AM", "weight" : "88", "notes" : "Must be delivered with 13, 19" },
-17 : {"address" : "3148 S 1100 W", "arrival" : "EOD", "weight" : "2"},           
-18 : {"address" : "1488 4800 S", "arrival" : "EOD", "weight" : "6", "notes" : "Can only be on truck 2" },
-19 : {"address" : "177 W Price Ave", "arrival" : "EOD", "weight" : "37"},
-20 : {"address" : "3595 Main St", "arrival" : "10:30 AM", "weight" : "37", "notes" : "Must be delivered with 13, 15" },
-21 : {"address" : "3595 Main St", "arrival" : "EOD", "weight" : "3"},
-22 : {"address" : "6351 South 900 East", "arrival" : "EOD", "weight" : "2"},
-23 : {"address" : "5100 South 2700 West", "arrival" : "EOD", "weight" : "5"},
-24 : {"address" : "5025 State St", "arrival" : "EOD", "weight" : "7"},
-25 : {"address" : "5383 South 900 East #104", "arrival" : "10:30 AM", "weight" : "7", "notes" : "Delayed on flight---will not arrive to depot until 9:05 am"},
-26 : {"address" : "5383 South 900 East #104", "arrival" : "EOD", "weight" : "25"},
-27 : {"address" : "1060 Dalton Ave S", "arrival" : "EOD", "weight" : "5"},
-28 : {"address" : "2835 Main St", "arrival" : "EOD", "weight" : "7", "notes" : "Delayed on flight---will not arrive to depot until 9:05 am"},
-29 : {"address" : "1330 2100 S", "arrival" : "10:30 AM", "weight" : "2"},
-30 : {"address" : "300 State St", "arrival" : "10:30 AM", "weight" : "1"},
-31 : {"address" : "3365 S 900 W", "arrival" : "10:30 AM", "weight" : "1"},
-32 : {"address" : "3365 S 900 W", "arrival" : "EOD", "weight" : "1", "notes" : "Delayed on flight---will not arrive to depot until 9:05 am"},
-33 : {"address" : "2530 S 500 E", "arrival" : "EOD", "weight" : "1"},
-34 : {"address" : "4580 S 2300 E", "arrival" : "10:30 AM", "weight" : "2"},
-35 : {"address" : "1060 Dalton Ave S", "arrival" : "EOD", "weight" : "88"},
-36 : {"address" : "2300 Parkway Blvd", "arrival" : "EOD", "weight" : "88", "notes" : "Can only be on truck 2"},
-37 : {"address" : "1060 Dalton Ave S", "arrival" : "10:30 AM", "weight" : "2"},
-38 : {"address" : "410 S State St", "arrival" : "EOD", "weight" : "9", "notes" : "Can only be on truck 2"},
-39 : {"address" : "2010 W 500 S", "arrival" : "EOD", "weight" : "9"},
-40 : {"address" : "380 W 2880 S", "arrival" : "10:30 AM", "weight" : "45"}}
+WGUPS_PACK = { 1 : { "address" : "195 W Oakland Ave", "city":"Salt Lake City","zip":"84115","arrival" : "10:30 AM","weight" : "21"},
+2 : {"address" : "2530 S 500 E", "city":"Salt Lake City","zip":"84106","arrival" : "EOD", "weight":"44"},
+3 : {"address" : "233 Canyon Rd","city":"Salt Lake City","zip":"84103","arrival" : "EOD", "weight" : "2", "notes" : "Can only be on truck 2"} ,
+4 : {"address" : "380 W 2880 S", "city":"Salt Lake City","zip":"84115","arrival" : "EOD", "weight" :     "4" },
+5 :  { "address" : "410 S State St", "city":"Salt Lake City","zip":"84111","arrival" : "EOD", "weight" : "5" },
+6 : { "address" : "3060 Lester St","city":"West Valley City","zip":"84119","arrival" : "10:30 AM", "weight" :"88","notes" : "Delayed on flight---will not arrive to depot until 9:05 am" },
+7 : { "address" : "1330 2100 S", "city":"Salt Lake City","zip":"84106","arrival" : "EOD", "weight" : "8" } ,
+8 : { "address" : "300 State St","city":"Salt Lake City","zip":"84103", "arrival" : "EOD", "weight" : "9" } ,
+9 : {"address" : "300 State St","city":"Salt Lake City","zip":"84103", "arrival" : "EOD", "weight" : "2", "notes" : "Wrong address listed" },
+10 : {"address" : "600 E 900 South","city":"Salt Lake City","zip":"84105", "arrival" : "EOD", "weight" : "1" } ,
+11 : { "address" : "2600 Taylorsville Blvd","city":"Salt Lake City","zip":"84118", "arrival" : "EOD", "weight" : "1" } ,
+12 : {"address" : "3575 W Valley Central Station bus Loop", "city":"West Valley City","zip":"84119","arrival" : "EOD", "weight" : "1" },
+13 : {"address" : "2010 W 500 S","city":"Salt Lake City","zip":"84104", "arrival" : "10:30 AM", "weight" : "2" },
+14 : {"address" : "4300 S 1300 E","city":"Millcreek","zip":"84117", "arrival" : "10:30 AM", "weight" : "88", "notes" : "Must be delivered with 15, 19" },
+15 : {"address" : "4580 S 2300 E","city":"Holladay","zip":"84117", "arrival" : "9:00 AM", "weight" : "4"},
+16 : {"address" : "4580 S 2300 E","city":"Holladay","zip":"84117", "arrival" : "10:30 AM", "weight" : "88", "notes" : "Must be delivered with 13, 19" },
+17 : {"address" : "3148 S 1100 W","city":"Salt Lake City","zip":"84119", "arrival" : "EOD", "weight" : "2"},           
+18 : {"address" : "1488 4800 S","city":"Salt Lake City","zip":"84123", "arrival" : "EOD", "weight" : "6", "notes" : "Can only be on truck 2" },
+19 : {"address" : "177 W Price Ave","city":"Salt Lake City","zip":"84115", "arrival" : "EOD", "weight" : "37"},
+20 : {"address" : "3595 Main St","city":"Salt Lake City","zip":"84115", "arrival" : "10:30 AM", "weight" : "37", "notes" : "Must be delivered with 13, 15" },
+21 : {"address" : "3595 Main St","city":"Salt Lake City","zip":"84115", "arrival" : "EOD", "weight" : "3"},
+22 : {"address" : "6351 South 900 East","city":"Murray","zip":"84121", "arrival" : "EOD", "weight" : "2"},
+23 : {"address" : "5100 South 2700 West","city":"Salt Lake City","zip":"84118", "arrival" : "EOD", "weight" : "5"},
+24 : {"address" : "5025 State St","city":"Murray","zip":"84107", "arrival" : "EOD", "weight" : "7"},
+25 : {"address" : "5383 South 900 East #104","city":"Salt Lake City","zip":"84117", "arrival" : "10:30 AM", "weight" : "7", "notes" : "Delayed on flight---will not arrive to depot until 9:05 am"},
+26 : {"address" : "5383 South 900 East #104", "city":"Salt Lake City","zip":"84117","arrival" : "EOD", "weight" : "25"},
+27 : {"address" : "1060 Dalton Ave S", "city":"Salt Lake City","zip":"84104","arrival" : "EOD", "weight" : "5"},
+28 : {"address" : "2835 Main St","city":"Salt Lake City","zip":"84115", "arrival" : "EOD", "weight" : "7", "notes" : "Delayed on flight---will not arrive to depot until 9:05 am"},
+29 : {"address" : "1330 2100 S", "city":"Salt Lake City","zip":"84106","arrival" : "10:30 AM", "weight" : "2"},
+30 : {"address" : "300 State St", "city":"Salt Lake City","zip":"84103","arrival" : "10:30 AM", "weight" : "1"},
+31 : {"address" : "3365 S 900 W", "city":"Salt Lake City","zip":"84119","arrival" : "10:30 AM", "weight" : "1"},
+32 : {"address" : "3365 S 900 W", "city":"Salt Lake City","zip":"84119","arrival" : "EOD", "weight" : "1", "notes" : "Delayed on flight---will not arrive to depot until 9:05 am"},
+33 : {"address" : "2530 S 500 E", "city":"Salt Lake City","zip":"84106","arrival" : "EOD", "weight" : "1"},
+34 : {"address" : "4580 S 2300 E","city":"Holladay","zip":"84117", "arrival" : "10:30 AM", "weight" : "2"},
+35 : {"address" : "1060 Dalton Ave S","city":"Salt Lake City","zip":"84104", "arrival" : "EOD", "weight" : "88"},
+36 : {"address" : "2300 Parkway Blvd","city":"West Valley City","zip":"84119", "arrival" : "EOD", "weight" : "88", "notes" : "Can only be on truck 2"},
+37 : {"address" : "1060 Dalton Ave S","city":"Salt Lake City","zip":"84111", "arrival" : "10:30 AM", "weight" : "2"},
+38 : {"address" : "410 S State St","city":"Salt Lake City","zip":"84111", "arrival" : "EOD", "weight" : "9", "notes" : "Can only be on truck 2"},
+39 : {"address" : "2010 W 500 S", "city":"Salt Lake City","zip":"84104","arrival" : "EOD", "weight" : "9"},
+40 : {"address" : "380 W 2880 S", "city":"Salt Lake City","zip":"84115","arrival" : "10:30 AM", "weight" : "45"}}
 o = open('dist.csv')
 addresses = []
 edges = []
@@ -130,4 +128,5 @@ def get_distances():
     return edge_list
 def get_schedule_deets():
     return scheduling_details
-
+def packs():
+    return WGUPS_PACK
