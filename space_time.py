@@ -13,17 +13,40 @@ first_delivery_sorted = []
 temp = []
 ind = []
 
-#get the distances from the hub and choose the min as the fist destination
+def greedy_func(temp_list):
+    temp = []
+    temp_list.sort(key = lambda x: float(x[2]))
+    print(temp_list)
+    temp.append(temp_list[0])
+    x = temp[0][2]
+    for i in range(len(temp_list)):
+        if temp_list[i][2] == x and temp_list[i] not in temp:
+            temp.append(temp_list[i])        
+    print('Subgraph: ')
+    print(temp)
+    return temp
+    
 node = 'HUB'
-#while not first_delivery:
-for p in first_delivery:
-    for e in edges:
-        if e[1].strip() == node:
-            print(p,pack[p]["address"],e[0],e[2])
-            temp.append((p,e[0],e[2]))
-min_pair = min(temp, key = lambda t: t[2])
-first_delivery_sorted.append(min_pair[2])
-print(min_pair[0])
+while len(first_delivery) != 0:
+
+    for p in first_delivery:
+        for e in edges:
+            if e[1].strip() == node and pack[p]["address"] == e[0] and float(e[2]) > 0.0 and p not in first_delivery_sorted:
+                print("Package number : " + str(p) + " Current Location : " + node + " loc: " + e[0] + " loc: " + e[1] + " dist: " + e[2])
+                temp.append((p,e[0],e[2]))
+            elif e[0].strip() == node and pack[p]["address"] == e[1] and float(e[2]) > 0.0 and p not in first_delivery_sorted:
+                print("Package number : " + str(p) + " Current Location : " + node + " loc: " + e[0] + " loc: " + e[1] + " dist: " + e[2])
+                temp.append((p,e[1],e[2]))
+    min_pair = greedy_func(temp)
+    if isinstance(min_pair, list):
+        for i in min_pair:
+            first_delivery_sorted.append(i)
+            node = i[1]
+            if i[0] in first_delivery:
+                first_delivery.remove(i[0])
+    temp.clear()
+    print('Final List: ')
+    print(first_delivery_sorted)
 
 '''   
 print(first_delivery)
