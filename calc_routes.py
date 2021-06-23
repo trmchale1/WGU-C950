@@ -13,8 +13,6 @@ first_delivery_sorted = []
 temp = []
 ind = []
 
-print(second_delivery)
-
 def greedy_func(temp_list):
     temp = []
     temp_list.sort(key = lambda x: float(x[2]))
@@ -45,19 +43,15 @@ while len(first_delivery) != 0:
                 first_delivery.remove(i[0])
     temp.clear()
 
-
-temp.clear()
+    
 second_delivery_sorted = []    
-print(second_delivery_sorted)
 node = 'HUB'
-while len(second_delivery) != 0:
+while len(second_delivery_sorted) != 14:
     for p in second_delivery:
         for e in edges:
             if e[1].strip() == node and pack[p]["address"] == e[0] and float(e[2]) > 0.0 and p not in second_delivery_sorted:
-                print("Package number : " + str(p) + " Current Location : " + node + " loc: " + e[0] + " loc: " + e[1] + " dist: " + e[2])
                 temp.append((p,e[0],e[2]))
             elif e[0].strip() == node and pack[p]["address"] == e[1] and float(e[2]) > 0.0 and p not in second_delivery_sorted:
-                print("Package number : " + str(p) + " Current Location : " + node + " loc: " + e[0] + " loc: " + e[1] + " dist: " + e[2])
                 temp.append((p,e[1],e[2]))
         minimum_pair = greedy_func(temp)
     if isinstance(minimum_pair, list):
@@ -67,5 +61,31 @@ while len(second_delivery) != 0:
             if i[0] in second_delivery:
                 second_delivery.remove(i[0])
     temp.clear()
-print('Final List: ')
-print(second_delivery_sorted)
+    
+third_delivery_sorted = []    
+node = 'HUB'
+while len(third_delivery_sorted) != 14:
+    for p in third_delivery:
+        for e in edges:
+            if e[1].strip() == node and pack[p]["address"] == e[0] and float(e[2]) > 0.0 and p not in third_delivery_sorted:
+                temp.append((p,e[0],e[2]))
+            elif e[0].strip() == node and pack[p]["address"] == e[1] and float(e[2]) > 0.0 and p not in third_delivery_sorted:
+                temp.append((p,e[1],e[2]))
+    min_pair = greedy_func(temp)
+    if isinstance(min_pair, list):
+        for i in min_pair:
+            third_delivery_sorted.append(i)
+            node = i[1]
+            if i[0] in third_delivery:
+                third_delivery.remove(i[0])
+    temp.clear()
+
+
+def get_first_delivery_sorted():
+    return first_delivery_sorted
+
+def get_second_delivery_sorted():
+    return second_delivery_sorted
+
+def get_third_delivery_sorted():
+    return third_delivery_sorted

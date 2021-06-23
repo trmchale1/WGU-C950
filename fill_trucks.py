@@ -63,7 +63,14 @@ for i in range(1,40):
         third_delivery.append(i)
 
 third_delivery.remove(9)
-
+second_delivery.remove(2)
+second_delivery.remove(33)
+second_delivery.remove(11)
+second_delivery.remove(21)
+third_delivery.append(2)
+third_delivery.append(33)
+third_delivery.append(11)
+third_delivery.append(21)
 
 
         
