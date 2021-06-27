@@ -71,6 +71,18 @@ third_delivery.append(2)
 third_delivery.append(33)
 third_delivery.append(11)
 third_delivery.append(21)
+first_delivery.remove(27)
+second_delivery.append(27)
+first_delivery.remove(35)
+second_delivery.append(35)
+second_delivery.remove(30)
+first_delivery.append(30)
+second_delivery.remove(29)
+first_delivery.append(29)
+second_delivery.remove(34)
+first_delivery.append(34)
+
+
 
 
         

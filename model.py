@@ -25,7 +25,7 @@ WGUPS_PACK = { 1 : { "address" : "195 W Oakland Ave", "city":"Salt Lake City","z
 6 : { "address" : "3060 Lester St","city":"West Valley City","zip":"84119","arrival" : "10:30 AM", "weight" :"88","notes" : "Delayed on flight---will not arrive to depot until 9:05 am" },
 7 : { "address" : "1330 2100 S", "city":"Salt Lake City","zip":"84106","arrival" : "EOD", "weight" : "8" } ,
 8 : { "address" : "300 State St", "city":"Salt Lake City","zip":"84103", "arrival" : "EOD", "weight" : "9" } ,
-9 : {"address" : "300 State St","city":"Salt Lake City","zip":"84103", "arrival" : "EOD", "weight" : "2", "notes" : "Wrong address listed" },
+9 : {"address" : "410 S State St","city":"Salt Lake City","zip":"84111", "arrival" : "EOD", "weight" : "2", "notes" : "Wrong address listed" },
 10 : {"address" : "600 E 900 South","city":"Salt Lake City","zip":"84105", "arrival" : "EOD", "weight" : "1" } ,
 11 : { "address" : "2600 Taylorsville Blvd","city":"Salt Lake City","zip":"84118", "arrival" : "EOD", "weight" : "1" } ,
 12 : {"address" : "3575 W Valley Central", "city":"West Valley City","zip":"84119","arrival" : "EOD", "weight" : "1" },

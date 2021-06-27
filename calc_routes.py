@@ -42,17 +42,17 @@ while len(first_delivery) != 0:
             if i[0] in first_delivery:
                 first_delivery.remove(i[0])
     temp.clear()
-
     
-second_delivery_sorted = []    
+second_delivery_sorted = []
+
 node = 'HUB'
 while len(second_delivery_sorted) != 14:
     for p in second_delivery:
         for e in edges:
             if e[1].strip() == node and pack[p]["address"] == e[0] and float(e[2]) > 0.0 and p not in second_delivery_sorted:
-                temp.append((p,e[0],e[2]))
+                    temp.append((p,e[0],e[2]))
             elif e[0].strip() == node and pack[p]["address"] == e[1] and float(e[2]) > 0.0 and p not in second_delivery_sorted:
-                temp.append((p,e[1],e[2]))
+                    temp.append((p,e[1],e[2]))
         minimum_pair = greedy_func(temp)
     if isinstance(minimum_pair, list):
         for i in minimum_pair:
@@ -80,7 +80,9 @@ while len(third_delivery_sorted) != 14:
                 third_delivery.remove(i[0])
     temp.clear()
 
+print(second_delivery_sorted)
 
+    
 def get_first_delivery_sorted():
     return first_delivery_sorted
 
